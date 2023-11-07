@@ -1,0 +1,67 @@
+
+@import "_reset.scss";
+
+.header{
+    h1 {
+        padding: 20px 50px 0;
+        margin: 0;
+        color: #000;
+    }
+}
+form{
+    padding: 20px;
+    background-color: var(--color);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+
+    ul {
+        padding: 0 5px;
+
+        li {
+            list-style: none;
+            padding: 10px 0;
+        
+            a{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+                img{
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+} 
+.formhidden{
+    display: none;
+    list-style: none;
+} 
+
+.header , .footer {
+    height: 100px;
+    background-color: #5b5a5a;
+}
+.foooter{
+ flex-shrink: 0;
+}
+
+
+@import "./reset";
+@import "./variable";
+@import "./layout";
+@import "./theme";
+@import "./accordion";
+@import "./alert";
+@import "./form";
+@import "./header_footer";
+@import "./modal";
+@import "./notification";
+@import "./popover";
+@import "./progressbar";
+@import "./tabs";
+@import "./tooltip";
+
+

@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Gentium Plus", serif;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+}
+
+form {
+  padding: 20px;
+  margin: 10px;
+  background-color: #FFF;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  box-shadow: 0px 3px 26px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+form .active {
+  border: 1px solid sblue;
+}
+form h3 {
+  color: #000;
+}
+form .form-group, form .email, form .webinput, form .webnum {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+form input.form-control.active, form select.form-control.active, form textarea.form-control.active {
+  border: 1px solid #0085FF;
+}
+form label {
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+form .form-control, form .form-select {
+  padding: 15px 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  color: #495057;
+  line-height: 1.2;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-bottom: 10px;
+}
+form .name-icon {
+  position: relative;
+}
+form .name-icon i.fa.fa-user-circle-o {
+  font-size: 25px;
+  position: absolute;
+  top: 12px;
+  left: 9px;
+}
+form .name-icon .form-control {
+  padding: 15px 50px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) calc(100% - 1px), #ccc 0) no-repeat;
+  background-size: calc((0% - 2px) / 28 + 42px) 70%;
+  background-position: 0 7px;
+}
+form .radio, form .form-check {
+  margin-bottom: 10px;
+}
+form .form-control:focus, form .btn-block:focus {
+  border: 1px solid #0085FF;
+}
+form input::-webkit-outer-spin-button, form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+form input::-moz-placeholder {
+  font-family: "Inter", sans-serif;
+}
+form input:-ms-input-placeholder {
+  font-family: "Inter", sans-serif;
+}
+form input::placeholder {
+  font-family: "Inter", sans-serif;
+}
+form option {
+  padding: 5px 5px;
+  font-size: 18px;
+}
+form textarea {
+  overflow: auto;
+  resize: vertical;
+}
+form input.inputweb {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+  width: 55%;
+}
+form .webinput:after {
+  content: "@gmail.com";
+  position: absolute;
+  z-index: 0;
+  background-color: #dadfe1;
+  width: 118px;
+  height: 48px;
+  margin: 0 auto;
+  right: 95px;
+  border-radius: 0 10px 10px 0;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .webinput.active:after {
+  border: 1px solid #0085FF;
+  height: 46px;
+}
+form input.inputNumwithhint {
+  position: relative;
+  z-index: 1;
+  left: 44px;
+  width: 70%;
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+}
+form .numberinput:before {
+  content: "+91";
+  position: absolute;
+  z-index: 1;
+  background-color: #dadfe1;
+  width: 45px;
+  height: 48px;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+}
+form .numberinput.active:before {
+  border: 1px solid #0085FF;
+  height: 46px;
+}
+form input.inputnum {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px 0 0 10px;
+  width: 55%;
+}
+form .webnum:after {
+  content: "Submit";
+  position: absolute;
+  z-index: 0;
+  background-color: #0085FF;
+  color: #FFF;
+  width: 118px;
+  height: 48px;
+  margin: 0 auto;
+  right: 95px;
+  border-radius: 0 10px 10px 0;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameprefix {
+  position: relative;
+}
+.nameprefix input {
+  position: relative;
+  z-index: 1;
+  left: 59px;
+  width: 80%;
+  border-radius: 0 4px 4px 0;
+}
+.nameprefix select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px 0 0 4px;
+  width: 60px;
+}
+.nameprefix select.classic {
+  background-size: 5px 5px, 5px 5px, 0 0;
+  border-radius: 4px 0 0 4px;
+}
+.nameprefix select.classic:focus {
+  background-size: 5px 5px, 5px 5px, 0 0;
+}
+
+select.classic {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right 15px center;
+}
+
+select.classic:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 15l7-7 7 7' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right 15px center;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.multiple-select option {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin: 0 0 10px 10px;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+}
+.multiple-select option:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: #0079bf;
+  border-radius: 2px;
+  padding: 12px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.multiple-select option:checked:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 8px;
+  width: 6px;
+  height: 14px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.multiple-select option:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.inlinecheckbox {
+  display: flex;
+  margin: 10px;
+}
+
+.radio {
+  display: flex;
+}
+
+.form-check {
+  display: flex;
+}
+.form-check .form-check-input, .form-check .form-radio {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.form-check .form-check-label, .form-check .form-label-radio {
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 15px;
+}
+.form-check .form-check-label:before, .form-check .form-label-radio:before {
+  content: "";
+  -webkit-appearance: none;
+  border: 1px solid #959090;
+  border-radius: 2px;
+  padding: 12px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.form-check .form-label-radio:before {
+  border-radius: 15px;
+}
+.form-check .form-check-input:checked + .form-check-label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 6px;
+  height: 14px;
+  border: solid #0085FF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.form-check .form-radio:checked + .form-label-radio:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 8px;
+  background-color: #0085FF;
+  border-radius: 15px;
+}
+.form-check .form-check-toggle, .form-check .form-check-toggleradio {
+  --inactive-bg: #cfd8dc;
+  --active-bg: #0085FF;
+  --size: 25px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: calc(var(--size) * 2.2);
+  height: var(--size);
+  display: inline-block;
+  border-radius: calc(var(--size) / 2);
+  border: 1px solid #959090;
+  cursor: pointer;
+  background-image: radial-gradient(circle calc(var(--size) / 2.8), #fff 100%, rgba(0, 0, 0, 0) 0), radial-gradient(circle calc(var(--size) / 1.5), rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: calc(var(--size) / -1.75) 0;
+  transition: background 0.2s ease-out;
+}
+.form-check .form-check-toggle:checked, .form-check .form-check-toggleradio:checked {
+  background-color: var(--active-bg);
+  background-position: calc(var(--size) / 1.75) 0;
+}
+.form-check .form-check-togglelabel, .form-check .form-check-label-toggleradio {
+  margin: 4px 0 0 5px;
+}
+
+.form-group.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-group.buttons button.sm-btn {
+  padding: 15px 10px;
+  width: 30%;
+  color: #FFF;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  background-color: #0085FF;
+  font-size: 16px;
+}
+.form-group.buttons button.sm-btn:focus {
+  background-color: #0d65bd;
+}
+.form-group.buttons button.md-btn {
+  padding: 15px 10px;
+  width: 30%;
+  color: #FFF;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  background-color: #0085FF;
+  font-size: 16px;
+}
+.form-group.buttons button.md-btn:focus {
+  background-color: #0d65bd;
+}
+.form-group.buttons button.lg-btn {
+  padding: 15px 10px;
+  width: 30%;
+  color: #FFF;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  background-color: #0085FF;
+  font-size: 16px;
+}
+.form-group.buttons button.lg-btn:focus {
+  background-color: #0d65bd;
+}

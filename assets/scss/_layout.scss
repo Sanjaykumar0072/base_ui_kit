@@ -1,0 +1,27 @@
+
+.heading {
+	margin: 50px 0 0;
+}
+.sidebar {
+	padding: 20px;
+	background-color: var(--color);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+	ul {
+		padding: 0 5px;
+		li {
+			list-style: none;
+			padding: 10px 0;
+		}
+	}
+}
+.formhidden {
+	display: none;
+	list-style: none;
+}
+.header , .footer {
+	height: 100px;
+	background-color: #5b5a5a;
+}

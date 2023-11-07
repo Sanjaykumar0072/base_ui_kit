@@ -1,0 +1,110 @@
+
+////////////////  Circular  //////////////////////////////
+.circle_percent {
+    font-size: 200px;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    background: #eee;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin: 20px;
+    
+    .circle_inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1em;
+      height: 1em;
+      clip: rect(0 1em 1em 0.5em);
+    }
+    .round_per {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1em;
+      height: 1em;
+      background: var(--bg-color);
+      clip: rect(0 1em 1em 0.5em);
+      transform: rotate(180deg);
+      transition: 1.05s;
+    }
+  }
+  .percent_more .circle_inner {
+    clip: rect(0 0.5em 1em 0em);
+  }
+  .percent_more:after {
+    position: absolute;
+    left: 0.5em;
+    top: 0em;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-color);
+    content: "";
+  }
+  .circle_inbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--color);
+    z-index: 3;
+    border-radius: 50%;
+  }
+  .percent_text {
+    position: absolute;
+    font-size: 36px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+//////////////////////////////////// line progressbar//////////////////////////////
+
+.progressbar-container {
+    padding: 1px;
+    margin: 0 auto;
+}
+.progressbar-container >div { 
+    position: relative;
+    margin: 20px 0;
+
+    .skill-title{
+        color: rgb(111, 106, 106);
+        margin-bottom: 10px;
+    }
+    .skill-quantity{
+        color:var(--bg-color);
+        position:absolute;
+        margin: 0;
+        right:0;
+        top:0;
+    }
+    .skill-box{
+        margin:10px 0;
+        width:100%;
+        height:15px;
+        border-radius: 10px;
+        overflow:hidden;
+        border: 1px solid var(--bg-color);
+        .volume{
+          height: 100%;
+          background:var(--bg-color);
+          padding-left:  5px;
+          color:#ddf;
+          transition: width ease-in-out 2s 2s;
+        }
+    }
+    .skill-quantity:after{
+        content: '';
+        position: absolute;
+        width:1px;
+        height:24px;
+        top:100%;
+        right:50%;
+        background-color: var(--bg-color);
+    }
+}

@@ -1,0 +1,15 @@
+
+.form-check-toggle.theme:checked {
+    background-color: #fff;
+    background-position: calc(var(--size) / 1.75) 0;
+  }
+   .light {
+  
+      .form-check .theme {
+
+  
+        .form-check-toggle.theme {
+          transform: translateX(60px);
+         }
+      }
+    }
